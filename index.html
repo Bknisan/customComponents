@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="js/Bars.js"></script>
+</head>
+<body>
+<h1>Bar HTML element Extension</h1>
+<progress-bar></progress-bar>
+<script>
+        (function () {
+            let progress = document.querySelector('progress-bar'),
+                complete = 0;
+
+            const progressInterval = setInterval(() => {
+                complete += 1;
+
+                if (complete <= 100) {
+                    progress.setAttribute('complete', complete);
+                } else {
+                    clearInterval(progressInterval);
+                }
+            }, 100);
+        })();
+</script>
+</body>
+</html>
