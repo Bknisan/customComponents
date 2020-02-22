@@ -2,25 +2,12 @@
 <html lang="en">
 <head>
     <script src="js/Bars.js"></script>
+    <script src="js/SearchEngine.js"></script>
 </head>
 <body>
 <h1>Bar HTML element Extension</h1>
 <progress-bar></progress-bar>
-<script>
-        (function () {
-            let progress = document.querySelector('progress-bar'),
-                complete = 0;
-
-            const progressInterval = setInterval(() => {
-                complete += 1;
-
-                if (complete <= 100) {
-                    progress.setAttribute('complete', complete);
-                } else {
-                    clearInterval(progressInterval);
-                }
-            }, 100);
-        })();
-</script>
+<div> </div>
+<search-engine></search-engine>
 </body>
 </html>
